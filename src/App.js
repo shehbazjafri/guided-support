@@ -20,7 +20,13 @@ function App() {
   // set option and add to history
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-    setUserHistory([...userHistory, option]);
+    setUserHistory([
+      ...userHistory,
+      {
+        step: step,
+        option: option,
+      },
+    ]);
   };
 
   const handleNextStep = (selectedStep) => {
@@ -32,8 +38,11 @@ function App() {
   };
 
   const handlePreviousStep = () => {
-    setStep(step - 1);
-    // remove last option from history
+    // go to previous step from history
+    const previousStep = userHistory[userHistory.length - 1];
+    setSelectedOption(previousStep.option);
+    setStep(previousStep.step);
+    // remove last step from history
     setUserHistory(userHistory.slice(0, userHistory.length - 1));
   };
 
