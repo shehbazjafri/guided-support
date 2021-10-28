@@ -6,10 +6,7 @@ import styled from "styled-components";
 import SupportGuide from "./components/SupportGuide";
 
 const StyledContainer = styled.div`
-  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
 `;
 
 function App() {
