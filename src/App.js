@@ -38,13 +38,11 @@ const StyledContainer = styled.div`
 `;
 
 function App() {
-  const [selectedOption, setSelectedOption] = useState("");
   const [userHistory, setUserHistory] = useState([]);
   const [step, setStep] = useState(1);
 
-  // set option and add to history
+  // add to history
   const handleOptionSelect = (option) => {
-    setSelectedOption(option);
     setUserHistory([
       ...userHistory,
       {
@@ -65,7 +63,6 @@ function App() {
   const handlePreviousStep = () => {
     // go to previous step from history
     const previousStep = userHistory[userHistory.length - 1];
-    setSelectedOption(previousStep.option);
     setStep(previousStep.step);
     // remove last step from history
     setUserHistory(userHistory.slice(0, userHistory.length - 1));
@@ -73,7 +70,6 @@ function App() {
 
   // start over
   const handleStartOver = () => {
-    setSelectedOption("");
     setStep(1);
     setUserHistory([]);
   };
@@ -96,7 +92,6 @@ function App() {
           handleOptionSelect={handleOptionSelect}
           handleNext={handleNextStep}
           handleBack={handlePreviousStep}
-          selectedOption={selectedOption}
           handleStartOver={handleStartOver}
         />
       </StyledContainer>
