@@ -14,8 +14,10 @@ export const SUPPORT_STEPS = [
       "iPhone 11",
       "iPhone XS",
       "iPhone XR",
-      "iPhone XS Max",
-      "iPhone X",
+      "iPhone 8",
+      "iPhone 7",
+      "iPhone 6",
+      "Other",
     ],
   },
   {

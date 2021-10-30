@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #ccc;
     --black05: rgba(0, 0, 0, 0.5);
     --smoke: #EEEEEE;
+    --secondaryBlue: #282c34;
   }
   html {
     background: var(--smoke);

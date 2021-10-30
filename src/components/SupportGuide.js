@@ -11,15 +11,21 @@ const Container = styled.div`
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  padding: 20px;
+  padding: 1rem;
   gap: 2rem;
+  @media (max-width: 767px) {
+    align-items: center;
+  }
 `;
 
 const Text = styled.p`
-  font-size: 20px;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   white-space: pre-line;
+  @media (max-width: 767px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const OptionsContainer = styled.div`
@@ -27,6 +33,9 @@ const OptionsContainer = styled.div`
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
   height: 100%;
+  @media (max-width: 542px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -41,14 +50,14 @@ const StyledButton = styled(Button)`
   min-width: 15rem;
   height: 5rem;
   &.MuiButton-outlined {
-    border: 1.5px solid grey;
+    border: 1.5px solid var(--grey);
     text-transform: none;
     color: black;
     font-size: 1.5rem;
     min-width: 15rem;
   }
   &.MuiButton-outlined:hover {
-    border: 1.5px solid darkgrey;
+    border: 1.5px solid var(--darkgrey);
     transform: scale(1.1);
   }
 `;
