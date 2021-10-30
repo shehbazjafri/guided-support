@@ -1,3 +1,5 @@
+import { generateRandomNumber } from "../utills";
+
 export const SUPPORT_STEPS = [
   {
     step: 1,
@@ -154,5 +156,33 @@ export const SUPPORT_STEPS = [
       },
     ],
     options: ["Done", "Troubleshoot other issues"],
+  },
+  {
+    step: 8,
+    lines: [
+      {
+        text: "",
+        type: "supportForm",
+      },
+    ],
+    options: [],
+  },
+  {
+    step: 9,
+    lines: [
+      {
+        text: "Sorry for the inconvenience!",
+      },
+      {
+        text: "At this stage, you should visit an Apple store to get your issue resolved.",
+      },
+      {
+        text: `Your case number is ${generateRandomNumber()}`,
+      },
+      {
+        text: "Thank you for your patience.",
+      },
+    ],
+    options: [],
   },
 ];

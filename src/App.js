@@ -71,6 +71,13 @@ function App() {
     setUserHistory(userHistory.slice(0, userHistory.length - 1));
   };
 
+  // start over
+  const handleStartOver = () => {
+    setSelectedOption("");
+    setStep(1);
+    setUserHistory([]);
+  };
+
   return (
     <>
       <GlobalStyles />
@@ -90,6 +97,7 @@ function App() {
           handleNext={handleNextStep}
           handleBack={handlePreviousStep}
           selectedOption={selectedOption}
+          handleStartOver={handleStartOver}
         />
       </StyledContainer>
     </>
